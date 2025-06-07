@@ -1,6 +1,7 @@
 package net.evankae.tutorialmod;
 
 import net.evankae.tutorialmod.block.ModBlocks;
+import net.evankae.tutorialmod.item.ModItemGroups;
 import net.evankae.tutorialmod.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -14,6 +15,8 @@ public class TutorialMod implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
+		ModItemGroups.registerItemGroups();
+
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 	}
